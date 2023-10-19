@@ -40,6 +40,7 @@ $task.fetch(myRequest).then(response => {
     const currentShelf = responseData.data?.shelf_list[0];
     if (!currentShelf) {
         console.log("请求错误，没有商品");
+        console.log(responseData.data);
         $notify("【老吴日单】", "Error", "请求错误，没有商品");
         $done();
     }
