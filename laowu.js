@@ -45,11 +45,9 @@ $task.fetch(myRequest).then(response => {
         $done();
     }
     const lastShelf = $prefs.valueForKey(LAST_KEY);
-    console.log(`last: ${lastShelf}, current: ${currentShelf.shelf_info}`);
+    // console.log(`last: ${lastShelf}, current: ${currentShelf.shelf_info}`);
     if (lastShelf && currentShelf.shelf_info !== lastShelf) {
         $notify("【老吴日单】", "", "发现新东西！！！！！！！！！");
-    } else {
-        $notify("【老吴日单】", "", "没有更新");
     }
     $prefs.setValueForKey(currentShelf.shelf_info, LAST_KEY);
     $done();
