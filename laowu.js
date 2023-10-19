@@ -52,6 +52,6 @@ $task.fetch(myRequest).then(response => {
     $prefs.setValueForKey(currentShelf.shelf_info, LAST_KEY);
     $done();
 }, reason => {
-    $notify("Error", "", reason.error);
+    console.log("【老吴日单】 Error: " + reason.error)
     $done();
 });
